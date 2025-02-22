@@ -1,0 +1,90 @@
+
+body {
+    background-color: #B6E3F4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.camara {
+    width: 38vw;
+    height: 39vh;
+    background: white;
+    border-radius: 7vmin;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: calc(2vh + 1vw);
+}
+
+.arriba {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+    margin-top: -3% ;
+}
+.boton + .flash {
+    margin-top: -7%;
+    transform: translate(-15%, -38%);
+}
+.boton{
+    width: 4vw;
+    height: 2vh;
+    background: #BF3461;
+    border-top-left-radius: 25vmin;
+    border-top-right-radius: 25vmin;
+    margin-top: -8.5%;
+    transform: translateX(-165%);
+      
+}
+.flash {
+    width: 7.5vw;
+    height: 4.5vh;
+    background: #40576E;
+    border-top-left-radius: 1.2vmin;
+    border-top-right-radius: 1.2vmin;
+}
+
+.flash::after{
+    content: "";
+    display: flex;
+    width: 2.8vw;
+    height: 3.2vh;
+    background: #7B98B2;
+    top: 40%;
+    left: 50%;
+    transform: translate(86%, 20%);
+    border-radius: 0.5vmin;
+}
+
+.punto{
+    display: flex;
+    width: 1vw;
+    height: 1.6vh;
+    background: black;
+    border-radius: 50%;
+    left: 15%;
+    top: 15%;
+    transform: translate(-1150%, 299%);
+}
+
+.punto::after{
+    content: "";
+    display: flex;
+    width: 19990vw;
+    height: 35vh;
+    background: black;
+    border-radius: 19910%;
+    left: 5%;
+    top: 5%;
+    transform: translate(-50%, -29%);
+}
+
+
+
+
