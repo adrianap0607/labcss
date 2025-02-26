@@ -19,7 +19,7 @@ body {
     align-items: center;
     justify-content: flex-start;
     padding-top: calc(2vh + 1vw);
-    filter: drop-shadow(1vw 1vw 0.1vw #A3D7EB); 
+    filter: drop-shadow(1vw 1vw 0.1vw #A3D7EB);
 }
     
     
@@ -47,14 +47,18 @@ body {
     border-top-right-radius: 25vmin;
     margin-top: -8.5%;
     transform: translateX(-165%);
-      
+
+    animation: apacharBoton 2s ease infinite;  
 }
+
 .flash {
     width: 7.5vw;
     height: 4.5vh;
     background: #40576E;
     border-top-left-radius: 1.2vmin;
     border-top-right-radius: 1.2vmin;
+
+    animation: lenteEncendido 2s ease infinite;
 }
 
 .flash::after{
@@ -82,6 +86,8 @@ body {
     background: black;
     border-radius: 50%;
     margin-left: -22vw; 
+
+    animation: puntoBrilla 1s ease infinite;
 }
 
 
@@ -97,7 +103,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 10vw;
+    width: 18vw;
     height: 30vh;
     overflow: visible;
     margin-top: -68vh;
@@ -127,8 +133,9 @@ body {
 
 .rainbow > .line{
     width: 0.7vw;
-    height: 20vh;
+    height: 21vh;
     flex-shrink: 0;
+    
 
 }
 
@@ -164,8 +171,6 @@ body {
     justify-self: center;
     margin-top: -30vh; 
     z-index: 4;
-    
-
 }
 
 .body3{
@@ -186,21 +191,19 @@ body {
 
 
 .reflejo {
-    width: 19vw; 
+    width: 24vw; 
     height: 19vh; 
     background-color: rgba(255, 255, 255, 0.20 );
     border-radius: 11vw 12.7vw 0 0; 
-    transform: rotate(-45deg) translate(10.5vw, -27vh);
+    
     opacity: 0.5;
     z-index: 2; 
     display: grid;
     place-items: center;
     z-index: 6;
+
+    animation: lenteGirando 2s linear infinite;
 }
-
-
-
-
 
 .rainbow > .line:nth-child(1) { background-color: #cf3b47; } 
 .rainbow > .line:nth-child(2) { background-color: #f9882b; }
@@ -208,3 +211,40 @@ body {
 .rainbow > .line:nth-child(4) { background-color: #f0f275; } 
 .rainbow > .line:nth-child(5) { background-color: #308c22; }
 .rainbow > .line:nth-child(6) { background-color: #1c5ab2; } 
+
+/* Animaciones */
+@keyframes puntoBrilla {
+    0% {
+        background: black;
+    }
+    50% {
+        background: red;
+    }
+    100% {
+        background: black;
+    }
+}
+
+@keyframes lenteGirando {
+    0% {
+        transform: translate(-6vw, -26vh) rotate(-45deg);
+    }
+    50% {
+        transform: translate(-6vw, -26vh) rotate(-90deg);
+    }
+    100% {
+        transform: translate(-6vw, -26vh) rotate(-45deg);
+    }
+}
+
+@keyframes lenteEncendido{
+    0% {
+        filter: brightness(1);
+    }
+    50% {
+        filter: brightness(1.5);
+    }
+    100% {
+        filter: brightness(1);
+    }
+}
